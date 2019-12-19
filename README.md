@@ -14,22 +14,20 @@ yarn add react-native-component-inview --save # yarn syntax
 ```
 import InView from 'react-native-component-inview'
 
+const [isInView, setIsInView] = useState(false)
+
 const checkVisible = (isVisible:boolean) => {
-      if (isVisible){
-        if (!this.state.isTheComponentInViewPort) {
-          this.setState({isTheComponentInViewPort: true})
-        }
-      } else {
-        if (this.state.isTheComponentInViewPort) {
-          this.setState({isTheComponentInViewPort: false})
-        }
-      }
+    if (isVisible){
+      setIsInView(isVisible)
+    } else {
+      setIsInView(isVisible)
     }
+  }
 
 <ScrollView>
   <InView onChange={(isVisible) => this.checkVisible(isVisible)}>
-    <View style={styles.text}>
-      <Text>⬇ This is the offer that we're tracking</Text>
+    <View style={[styles.item, {backgroundColor: isInView ? 'yellow' : '#f9c2ff'}]}>
+      <Text>yay</Text>
     </View>
   </InView>
 </ScrollView>
