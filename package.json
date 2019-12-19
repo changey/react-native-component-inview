@@ -10,7 +10,9 @@
     "react-component",
     "react-native",
     "ios",
-    "android"
+    "android",
+    "intersection-observer",
+    "impressions"
   ],
   "author": "Eric Chang <eric61213@gmail.com> (http://github.com/changey)",
   "license": "MIT",
