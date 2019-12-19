@@ -1,0 +1,25 @@
+{
+  "name": "react-native-inview-port",
+  "version": "1.0.0",
+  "description": "Detect if component is in device viewport",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "author": "Eric Chang <eric61213@gmail.com> (http://github.com/changey)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changey/react-native-inview-port.git"
+  },
+  "bugs": {
+    "url": "https://github.com/changey/react-native-inview-port/issues"
+  },
+  "homepage": "https://github.com/changey/react-native-inview-port#readme"
+}
