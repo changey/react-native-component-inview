@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Dimensions, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, View } from 'react-native'
 
 export interface Iprops {
   disabled: boolean
@@ -56,7 +56,7 @@ const InViewPort = class extends Component<Iprops> {
   isInViewPort() {
     const window = Dimensions.get('window')
     const isVisible =
-      this.state.rectBottom != 0 &&
+      this.state.rectBottom !== 0 &&
       this.state.rectTop >= 0 &&
       this.state.rectBottom <= window.height &&
       this.state.rectWidth > 0 &&
@@ -75,18 +75,10 @@ const InViewPort = class extends Component<Iprops> {
           }}
           {...this.props}
         >
-          <View style={styles.text}>
-            <Text>⬇ This is the offer that we're tracking</Text>
-          </View>
+          {this.props.children}
         </View>
       )
   }
 }
-
-const styles = StyleSheet.create({
-  text: {
-    backgroundColor: 'red',
-  }
-})
 
 export default InViewPort
