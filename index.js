@@ -21,7 +21,7 @@ const InViewPort = class extends Component<Iprops> {
     this.stopWatching()
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.disabled) {
       this.stopWatching()
     } else {
