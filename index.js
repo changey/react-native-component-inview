@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
 import { Dimensions, View } from 'react-native'
+import React, { Component } from 'react'
 
 export interface Iprops {
   disabled: boolean
@@ -19,15 +19,6 @@ const InViewPort = class extends Component<Iprops> {
 
   componentWillUnmount() {
     this.stopWatching()
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.disabled) {
-      this.stopWatching()
-    } else {
-      this.lastValue = null
-      this.startWatching()
-    }
   }
 
   startWatching() {
